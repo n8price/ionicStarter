@@ -1,0 +1,35 @@
+<ion-view view-title="Signup" hide-nav-bar="true">
+   <ion-content class="padding">
+     <div class="app-logo"><img src="img/todo_logo.png"></div>
+     <div>
+       <form name="loginForm">
+         <label class="item item-input">
+                 <input id="email" name="email" required type="email" placeholder="Your email" ng-model="vm.formdata.email">
+             </label>
+         <label class="item item-input">
+                 <input id="firstname" name="firstname" type="text" placeholder="Your first name" ng-model="vm.formdata.firstName">
+             </label>
+         <label class="item item-input">
+                 <input id="username" name="lastname" type="text" placeholder="Your last name" ng-model="vm.formdata.lastName">
+             </label>
+         <label class="item item-input">
+                 <input id="password" required name="password" type="password" placeholder="Your password" ng-model="vm.formdata.password">
+             </label>
+         <label class="item item-input">
+                 <input id="again" required name="again" type="password" placeholder="confirm your password" ng-model="vm.formdata.passwordConfirm">
+             </label>
+       </form>
+     </div>
+
+     <div ng-show="vm.error" class="center-div login-error">
+       <h4 class="login-error" ng-bind="vm.error"></h4>
+     </div>
+
+     <div>
+       <button class="button button-block button-positive" ng-disabled="!loginForm.$valid" ng-click="vm.signup()"> Create Account </button>
+     </div>
+     <div class="center-div">
+       Already have an account? <a href="#/login">Sign in</a>
+     </div>
+   </ion-content>
+ </ion-view>

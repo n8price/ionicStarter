@@ -1,0 +1,16 @@
+
+<ion-view view-title="Projects">
+  <ion-content>
+    
+    <ion-list>
+      <ion-item ng-repeat="project in vm.projects | orderBy:'name'" ng-href="#/tasks/{{project.id}}" class="item-icon-right">
+<h2>{{project.name}}</h2><br />
+<p>{{project.created_on}}</p>
+<i class="ion-chevron-right icon icon-accessory"></i>
+
+      </ion-item>
+    </ion-list>
+    
+    <!--<pre>{{ vm.projects | json }}</pre>-->
+  </ion-content>
+</ion-view>

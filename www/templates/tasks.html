@@ -1,0 +1,14 @@
+
+<ion-view view-title="Tasks">
+  <ion-content>       
+       <ion-list>
+         <ion-item ng-repeat="task in vm.tasks | orderBy : ['completed','name']" class="item-text-wrap item-icon-left" ng-class="{'completed-task': task.completed }">
+           <h2>{{task.name}}</h2>
+           <!--<p>{{task.completed}}</p>-->
+           <i class="icon" ng-class="task.completed ? 'ion-checkmark-circled': 'ion-ios-circle-outline'"></i>
+         </ion-item>
+       </ion-list>
+       
+     <!--<pre>{{ vm.tasks | json }}</pre>-->
+  </ion-content>
+</ion-view>

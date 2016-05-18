@@ -1,0 +1,27 @@
+.completed-task {
+     text-decoration: line-through;
+     color: #A9A9A9;
+ }
+ 
+ .center-div {
+   display: inline-block;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+   margin-top: 10px;
+ }
+
+ #social-login-buttons {
+   margin-top: 30px;
+ }
+
+ .app-logo {
+   max-width: 100px;
+   margin: auto;
+   background-repeat: no-repeat;
+   background-position: center;
+ }
+
+ .login-error {
+   color:red;
+ }
